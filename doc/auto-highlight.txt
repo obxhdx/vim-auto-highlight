@@ -1,0 +1,32 @@
+*auto-highlight.txt*  Automatically highlight all occurrences of the
+current word without searching
+
+DESCRIPTION                                        *auto-highlight*
+
+Automatically highlight all occurrences of the current word without
+searching. To change the highlight color use the |AutoHighlightWord|
+syntax group.
+
+COMMANDS                                  *auto-highlight-commands*
+
+                                        *:DisableAutoHighlightWord*
+
+Disables auto highlighting for the current buffer.
+
+                                         *:EnableAutoHighlightWord*
+
+Enables auto highlighting for the current buffer.
+
+                                         *:ToggleAutoHighlightWord*
+
+Toggles auto highlighting for the current buffer.
+
+OPTIONS                                    *auto-highlight-options*
+
+                              *g:auto_highlight#disabled_filetypes*
+
+Disables auto highlighting for the specified filetypes: >
+
+	let g:auto_highlight#disabled_filetypes = ['nerdtree']
+
+vim:tw=78:et:ft=help:norl:
