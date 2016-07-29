@@ -6,10 +6,9 @@ function! s:AutoHighlightWord()
   endif
 
   let s:word = expand('<cword>')
-  let s:escaped_word = substitute(s:word, '\(*\|\~\)', '\\\1', 'g')
 
-  if len(s:escaped_word) > 1
-    call add(w:highlight_ids, matchadd('AutoHighlightWord', '\<'.s:escaped_word.'\>', 0))
+  if match(s:word, '\w\+') >= 0 && len(s:word) > 1
+    call add(w:highlight_ids, matchadd('AutoHighlightWord', '\<'.s:word.'\>', 0))
   endif
 endfunction
 
