@@ -42,7 +42,7 @@ augroup AutoHighlightWord
 augroup END
 
 command! DisableAutoHighlightWord    let b:auto_highlight_disabled = 1
-command! EnableleAutoHighlightWord   let b:auto_highlight_disabled = 0
+command! EnableAutoHighlightWord     let b:auto_highlight_disabled = 0
 command! ToggleAutoHighlightWord     let b:auto_highlight_disabled = !get(b:, 'auto_highlight_disabled')
 
 " vim:set sw=2 sts=2:
