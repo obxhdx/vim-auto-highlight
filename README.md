@@ -13,3 +13,7 @@ See [documentation](https://github.com/obxhdx/vim-auto-highlight/blob/master/doc
 ## Related work
 
 There are lots of related tips (like [this](http://vim.wikia.com/wiki/Auto_highlight_current_word_when_idle)) on the internet. I followed a different approach only because I wanted `Search` syntax group to always have precedence over the auto highlighted words.
+
+## License
+
+MIT
