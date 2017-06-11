@@ -21,7 +21,7 @@ function! s:ClearMatches()
   let ids = w:highlight_ids
 
   while !empty(ids)
-    call matchdelete(remove(ids, -1))
+    silent! call matchdelete(remove(ids, -1))
   endwhile
 endfunction
 
