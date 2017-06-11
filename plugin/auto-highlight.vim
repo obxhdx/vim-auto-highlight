@@ -33,7 +33,11 @@ function! s:SkipDisabledFiletypes()
   endif
 endfunction
 
-highlight! AutoHighlightWord ctermbg=236 ctermfg=NONE
+if &background == 'dark'
+  highlight! AutoHighlightWord ctermbg=236 ctermfg=NONE
+else
+  highlight! AutoHighlightWord ctermbg=254 ctermfg=NONE
+endif
 
 augroup AutoHighlightWord
   autocmd!
