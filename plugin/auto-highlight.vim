@@ -1,3 +1,7 @@
+function! s:GetSyntaxGroupAtBottomOfSynStack()
+  return synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")
+endfunction
+
 function! s:AutoHighlightWord()
   silent! call s:ClearMatches()
 
@@ -6,6 +10,12 @@ function! s:AutoHighlightWord()
   endif
 
   let s:word = expand('<cword>')
+
+  if get(b:, 'auto_highlight_skip_reserved_words') == 1
+    if match(s:GetSyntaxGroupAtBottomOfSynStack(), 'Keyword\|Statement') >= 0
+      return
+    endif
+  endif
 
   if match(s:word, '\w\+') >= 0 && len(s:word) > 1
     let s:escaped_word = substitute(s:word, '\(*\)', '\\\1', 'g')
