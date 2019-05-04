@@ -34,9 +34,9 @@ function! s:SkipDisabledFiletypes()
 endfunction
 
 if &background == 'dark'
-  highlight! AutoHighlightWord ctermbg=236 ctermfg=NONE
+  highlight! AutoHighlightWord ctermbg=238 ctermfg=NONE guibg=#444444 guifg=NONE
 else
-  highlight! AutoHighlightWord ctermbg=254 ctermfg=NONE
+  highlight! AutoHighlightWord ctermbg=254 ctermfg=NONE guibg=#E4E4E4 guifg=NONE
 endif
 
 augroup AutoHighlightWord
